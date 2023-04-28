@@ -136,17 +136,23 @@
 	// scroll
 	var scrollWindow = function() {
 		$(window).scroll(function(){
+		  var $w = $(this),
+			  st = $w.scrollTop(),
+			  navbar = $('.ftco_navbar'),
+			  sd = $('.js-scroll-wrap'),
+			  scrollThreshold = 150;
+
 			var $w = $(this),
 					st = $w.scrollTop(),
 					navbar = $('.ftco_navbar'),
 					sd = $('.js-scroll-wrap');
 
-			if (st > 150) {
+			if (st > scrollThreshold) {
 				if ( !navbar.hasClass('scrolled') ) {
 					navbar.addClass('scrolled');	
 				}
 			} 
-			if (st < 150) {
+			if (st < scrollThreshold) {
 				if ( navbar.hasClass('scrolled') ) {
 					navbar.removeClass('scrolled sleep');
 				}
