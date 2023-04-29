@@ -1757,6 +1757,11 @@ textarea.form-control {
   font-size: 80%;
   color: #28a745; }
 
+  #home-section.hero {
+    padding-bottom: 50px; /* adjust the value as needed */
+  }
+
+
 .valid-tooltip {
   position: absolute;
   top: 100%;
@@ -3603,59 +3608,6 @@ input[type="button"].btn-block {
     .navbar-expand-md .navbar-toggler {
       display: none; } }
 
-/* ---------------------- */
-
-@media (max-width: 991.98px) {
-  /* Hide dropdown menus when navbar is collapsed */
-  .navbar-collapse .dropdown-menu {
-    display: none;
-  }
-
-  /* Show dropdown menus when their parent link is clicked */
-  .navbar-collapse .dropdown .nav-link {
-    position: relative;
-  }
-
-  .navbar-collapse .dropdown .nav-link:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #ccc;
-    transition: all 0.3s ease-in-out;
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-
-  .navbar-collapse .dropdown .nav-link:focus:after,
-  .navbar-collapse .dropdown .nav-link:hover:after {
-    transform: scaleY(1);
-  }
-
-  /* Hide dropdown menus when navbar is expanded */
-  .navbar-expand-lg .dropdown-menu {
-    display: none;
-  }
-
-  /* Show dropdown menus when their parent link is hovered */
-  .navbar-expand-lg .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-  /* Prevent scrolling when navbar or dropdown menu is open */
-  .navbar-collapse.show,
-  .dropdown-menu.show {
-    overflow: hidden;
-  }
-}
-
-
-
-/* ------------------------ */
-      
       
 
 @media (max-width: 991.98px) {
