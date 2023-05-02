@@ -28,24 +28,24 @@ $secondary: #a0f669;
 }
 
 html {
-	// overflow-x: hidden;
+	 overflow-x: auto;
 }
 body {
 	font-family: $font-primary;
 	background: $black;
-	font-size: 16px;
-	line-height: 1.8;
+	font-size: 14px;
+	line-height: 1;
 	font-weight: 400;
 	color: lighten($black,60%);
 	&.menu-show {
-		overflow: hidden;
+		overflow:auto;
 		position: fixed;
 		height: 100%;
 		width: 100%;
 	}
 }
 a {
-	transition: .3s all ease;
+	transition: .5s all ease;
 	color: $primary;
 	&:hover, &:focus {
 		text-decoration: none;
@@ -72,18 +72,18 @@ h1, h2, h3, h4, h5,
 	left: 0;
 	right: 0;
 	z-index: 3;
-	// padding-top: 30px;
+	 padding-top: 00px;
 	@include media-breakpoint-down(md) {
 		background: $black!important;
 		position: relative;
 		top: 0;
 		padding-top: 0;
-		padding-bottom: 0;
+		padding-bottom: 40px;
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 	.container{
-		width: 1110px;
+		width: 1300px;
 		margin: 0 auto;
 		padding: 0;
 		@include media-breakpoint-up(lg){
@@ -92,8 +92,8 @@ h1, h2, h3, h4, h5,
 
 	.navbar-brand {
 		color: $white;
-		padding-top: .7rem;
-		padding-bottom: .7rem;
+		padding-top: .4rem;
+		padding-bottom: 2rem;
 		&:hover, &:focus{
 			color: $white !important;
 		}
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5,
 	
 	.navbar-nav {
 		@include media-breakpoint-down(md){
-			padding-bottom: 20px;
+			padding-bottom: 08px;
 			// margin-left: 20px !important;
 			margin-right: 0;
 		}
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5,
 				}
 				@include media-breakpoint-down(md){
 					padding-left: 0;
-					padding-right: 0;
+					padding-right: 2;
 					padding-bottom: 1rem;
 					padding-top: 0;
 					color: $white;
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5,
 		margin-top: -130px;
 		background: $black!important;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-		padding: 0 15px;
+		padding: 0 10px;
 		.nav-item {
 			> .nav-link{
 				color: $white !important;
@@ -317,8 +317,8 @@ h1, h2, h3, h4, h5,
 
 		.navbar-brand {
 			color: $white;
-			padding-top: 1rem;
-			padding-bottom: 1rem;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
 			font-size: 24px;
 		}
 	}
@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5,
 	  text-orientation: sideways;
 	  margin: 0rem;
 	  position: relative;
-	  top: 0;
+	  top:0;
 	  left: 4em;
 	  height: 90%;
 	  text-transform: uppercase;
@@ -358,7 +358,7 @@ h1, h2, h3, h4, h5,
 
 //OWL CAROUSEL
 .owl-carousel {
-	position: relative;
+	position: absolute;
 	.owl-item {
 		opacity: .4;
 		&.active {
@@ -395,16 +395,16 @@ h1, h2, h3, h4, h5,
 		}
 	}
 	&.home-slider {
-		position: relative;
-		height: 750px;
+		position: absolute;
+		height: 550px;
 		z-index: 0;
 		.slider-item {
-			//background-size: cover;
+			background-size:contain;
 			background-repeat: no-repeat;
 			background-position: center center;
-			height: 750px;
+			height: 550px;
 			position: relative;
-			z-index: 0;
+			z-index: -1;
 			@include media-breakpoint-down(lg){
 				background-position: center center !important;
 			}
@@ -453,6 +453,7 @@ h1, h2, h3, h4, h5,
 				}
 				.one-forth{
 					width: 50%;
+					height: 60%;
 					position: relative;
 					@include media-breakpoint-up(md){
 						position: absolute;
@@ -646,25 +647,25 @@ h1, h2, h3, h4, h5,
 } 
 
 
-// .hero-wrap{
-// 	width: 100%;
-// 	height: 100%;
-// 	position: inherit;
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-// 	@include media-breakpoint-down(md){
-// 	}
-// 	.overlay{
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		right: 0;
-// 		bottom: 0;
-// 		content: '';
-// 		opacity: 0;
-// 		background: $black;
-// 	}
-// }
+.hero-wrap{
+	width: 100%;
+	height: 100%;
+	position:sticky;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include media-breakpoint-down(md){
+	}
+	.overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		opacity: 0;
+		background: $black;
+	}
+}
 
 .slider-text{
 	h1 {
@@ -1864,10 +1865,11 @@ textarea.form-control {
 // sidebar
 
 .sidebar-box {
-	margin-bottom: 30px;
-	padding: 25px;
+	margin-bottom: 20px;
+	padding: 15px;
 	font-size: 15px;
 	width: 100%;
+	height:70%;
 	h3 {
 		font-size: 18px;
 		margin-bottom: 15px;
